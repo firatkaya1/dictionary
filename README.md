@@ -43,22 +43,12 @@ public static void main(String[] args) {
         }
     }
 ```
-
-```java
-public static void main(String[] args) {
-        Gson gson = new Gson();
-        // İndirmiş olduğumuz JSON dosyasının uzantısı belirttik.
-        String path = "/home/kaya/Downloads/dictionary-json/dictionary.json";
-        try{
-            JsonReader reader = new JsonReader(new FileReader(path));
-            English[] data = gson.fromJson(reader, English[].class);
-            for(int i=0;i<data.length;i++){
-                System.out.println(data[i].toString());
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
-        }
-    }
+Elde edeceğimiz örnek çıktımız : 
+```json
+English{word='Victory', type='n.', category='Common Usage', turkish='utku'}
+English{word='Victory', type='n.', category='General', turkish='utku'}
+English{word='Victory', type='n.', category='General', turkish='başarı'}
+English{word='Victory', type='n.', category='General', turkish='galebe'}
 ```
 
 
