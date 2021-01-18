@@ -4,8 +4,8 @@
 
 # Nasıl Kullanırım ? 
 ## JSON 
-Bu repositoride 2 adet dosya bulunmaktadır. Bunlardan biri dictionary-json.zip ve dictionary-sql.zip'tir. İlk dosya JSON formatında tutulmaktadır ve toplamda 1460672 adet eşleştirilmiş kelimeler bulunmaktadır. Basit bir şekilde, bu JSON dosyasını aşağıda görmüş olduğunuz Java kodu ile GSON kütüphanesini kullanarak bir örnek bulunmaktadır. 
-Öncelikle eğer GSON kütüphanesi bilgisayarınızda bulunmuyorsa bunu indirin. Ya da maven tabanlı bir projedeyseniz bağımlılığı pom.xml'e ekleyin.
+Bu repositoride 2 adet dosya bulunmaktadır. Bunlardan biri dictionary-json.zip ve dictionary-sql.zip'tir. İlk dosya JSON formatında tutulmaktadır ve toplamda 1460672 adet eşleştirilmiş kelimeler bulunmaktadır. Basit bir şekilde, bu JSON dosyasını aşağıda görmüş olduğunuz Java kodu ile GSON kütüphanesini kullanarak okuyan bir örnek bulunmaktadır.   
+Öncelikle eğer GSON kütüphanesi bilgisayarınızda bulunmuyorsa bunu indirin. Ya da maven tabanlı bir projedeyseniz bağımlılığı pom.xml'e ekleyin.  
 ```java
 public static void main(String[] args) {
         Gson gson = new Gson();
