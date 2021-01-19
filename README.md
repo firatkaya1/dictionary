@@ -1,10 +1,12 @@
 # dictionary
 # Nedir ? 
-200307 tane İngilizce kelime ve 535911 adet Türkçe kelime bulunan, eşleştirilmiş, kategorilerine ve kelime türlerine göre ayrılmış basit bir sözlük veritabanıdır.
-
+200307 tane İngilizce kelime ve 535911 adet Türkçe kelime bulunan, eşleştirilmiş, kategorilerine ve kelime türlerine göre ayrılmış basit bir sözlük veritabanıdır.  
+[Download JSON](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-json.zip)  
+[Download SQL](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-sql.zip)   
 # Nasıl Kullanırım ? 
 ## JSON 
 Bu repositoride 2 adet dosya bulunmaktadır. Bunlardan biri **dictionary-json.zip** ve **dictionary-sql.zip**'tir. İlk dosya JSON formatında tutulmaktadır ve toplamda 1460672 adet eşleştirilmiş kelimeler bulunmaktadır. Basit bir şekilde, bu JSON dosyasını aşağıda görmüş olduğunuz Java kodu ile GSON kütüphanesini kullanarak okuyan bir örnek bulunmaktadır.   
+
 Öncelikle eğer GSON kütüphanesi bilgisayarınızda bulunmuyorsa bunu indirin. Ya da maven tabanlı bir projedeyseniz bağımlılığı pom.xml'e ekleyin.  
 
 
