@@ -85,3 +85,7 @@ Elde edeceğimiz çıktı aşağıdaki gibi olacaktır :
 | 635279      | hello   | alo          | interjection | General      | 
 +-------------+---------+--------------+--------------+--------------+
 ```
+Bir problemle karşılaşırsanız bana yazabilirsiniz. 
+
+[me@kayafirat.com](mailto:me@kayafirat.com?subject=[GitHub]%20dictionary)
+
