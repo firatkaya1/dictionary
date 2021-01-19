@@ -57,7 +57,7 @@ Repositoride bulunan **dictionary-sql.zip** isimli dosyayı bilgisayarınıza in
 
 Elde ettiğimiz schema dosyası toplamda 5 adet tablo içermektedir. Bunlar category, english, translate, turkish ve type'dir. Aşağıda bulunan resim, sizlere ufakta olsa tablolar arasındaki ilişkilerin ne olduğunu anlamanızda kolaylık sağlayacaktır. 
 
-[!database tables](https://raw.githubusercontent.com/firatkaya1/dictionary/main/database.png)
+![image](https://raw.githubusercontent.com/firatkaya1/dictionary/main/database.png)
 
 ### Sorgular
 
