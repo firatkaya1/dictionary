@@ -1,5 +1,5 @@
-(Read this document in turkish language)[https://github.com/firatkaya1/dictionary/blob/main/README_TR.md] :point_left:  
-(Read this document in english language)[https://github.com/firatkaya1/dictionary/blob/main/README.md] :point_left:  
+[For Turkish ](https://github.com/firatkaya1/dictionary/blob/main/README_TR.md) :point_left:  
+[For English](https://github.com/firatkaya1/dictionary/blob/main/README.md) :point_left:  
 
 
 # What is this?
