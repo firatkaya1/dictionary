@@ -1,14 +1,11 @@
-# dictionary
-# Nedir ? 
-200307 tane İngilizce kelime ve 535911 adet Türkçe kelime bulunan, eşleştirilmiş, kategorilerine ve kelime türlerine göre ayrılmış basit bir sözlük veritabanıdır.  
-[Download JSON](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-json.zip)  
+# What ?
+It is a simple dictionary database consisting of 200307 English words and 535911 Turkish words, matched, separated by categories and word types.[Download JSON](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-json.zip)    
 [Download SQL](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-sql.zip)   
-# Nasıl Kullanırım ? 
+# Usage ? 
 ## JSON 
-Bu repositoride 2 adet dosya bulunmaktadır. Bunlardan biri **dictionary-json.zip** ve **dictionary-sql.zip**'tir. İlk dosya JSON formatında tutulmaktadır ve toplamda 1460672 adet eşleştirilmiş kelimeler bulunmaktadır. Basit bir şekilde, bu JSON dosyasını aşağıda görmüş olduğunuz Java kodu ile GSON kütüphanesini kullanarak okuyan bir örnek bulunmaktadır.   
+There are 2 files in this repository. One of them is ** dictionary-json.zip ** and ** dictionary-sql.zip **. The first file is kept in JSON format and there are 1460672 paired words in total. In simple terms, there is an example reading this JSON file using the GSON library with the Java code you see below.   
 
-Öncelikle eğer GSON kütüphanesi bilgisayarınızda bulunmuyorsa bunu indirin. Ya da maven tabanlı bir projedeyseniz bağımlılığı pom.xml'e ekleyin.  
-
+Firstly, if you don't have the GSON library on your computer, download it. Or if you are in a maven based project, add the dependency to pom.xml.
 
 ```
 <dependency>
@@ -18,7 +15,7 @@ Bu repositoride 2 adet dosya bulunmaktadır. Bunlardan biri **dictionary-json.zi
 </dependency>
 ```
 ---
-English isimli classımız :   
+English class :   
 ```java
 public class English {
     private String word;
@@ -45,7 +42,7 @@ public static void main(String[] args) {
         }
     }
 ```
-Elde edeceğimiz örnek çıktımız : 
+Our sample output:
 ```
 English{word='Victory', type='n.', category='Common Usage', turkish='utku'}
 English{word='Victory', type='n.', category='General', turkish='utku'}
@@ -54,18 +51,17 @@ English{word='Victory', type='n.', category='General', turkish='galebe'}
 ```
 
 ## SQL
+Download the file named ** dictionary-sql.zip ** in the repository to your computer and import it into the MySQL you used. Schema's name might be ** lemon **.  
 
-Repositoride bulunan **dictionary-sql.zip** isimli dosyayı bilgisayarınıza indirerek kullanmış olduğunuz MySQL'e import edin. schema'nın ismi **lemon** diye geçebilir. 
-
-Elde ettiğimiz schema dosyası toplamda 5 adet tablo içermektedir. Bunlar category, english, translate, turkish ve type'dir. Aşağıda bulunan resim, sizlere ufakta olsa tablolar arasındaki ilişkilerin ne olduğunu anlamanızda kolaylık sağlayacaktır. 
+The schema file we have obtained contains 5 tables in total. These are category, english, translate, turkish and type. The picture below will help you understand what the relationships between the tables are, even if it is small.
 
 ![image](https://raw.githubusercontent.com/firatkaya1/dictionary/main/database.png)
 
-### Sorgular
+### Queries
 
-Aşağıda bulunan hazır sorgular ile tablolar üzerinde aramak istediğiniz değerleri elde edebilirsiniz.
+You can obtain the values you want to search on the tables with the ready queries below.   
 
-"hello" kelimesinin türkçe anlamlarını, kategorilerini ve tiplerini getirmek istediğimizi varsayalım. 
+For example, let's we assume we wants to translate turkish meaning of "hello" word.  
 ```sql
 SELECT translate.id as id,english.word as word_en,turkish.word as word_tr,type.name as type,category.name as category    
 FROM translate     
@@ -75,7 +71,7 @@ INNER JOIN type ON translate.type_id = type.id
 INNER JOIN turkish ON translate.turkish_id = turkish.id    
 WHERE translate.english_id IN (SELECT id FROM english WHERE word LIKE "hello");
 ```
-Elde edeceğimiz çıktı aşağıdaki gibi olacaktır : 
+Our sample output:
 
 ```sh
 +-------------+---------+--------------+--------------+--------------+
@@ -87,7 +83,7 @@ Elde edeceğimiz çıktı aşağıdaki gibi olacaktır :
 | 635279      | hello   | alo          | interjection | General      | 
 +-------------+---------+--------------+--------------+--------------+
 ```
-Bir problemle karşılaşırsanız bana yazabilirsiniz. 
+Contact me if you encounter any problems.
 
 [me@kayafirat.com](mailto:me@kayafirat.com?subject=[GitHub]%20dictionary)
 
