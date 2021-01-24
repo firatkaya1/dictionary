@@ -1,11 +1,11 @@
 [For Turkish ](https://github.com/firatkaya1/dictionary/blob/main/README_TR.md) :point_left:  
 [For English](https://github.com/firatkaya1/dictionary/blob/main/README.md) :point_left:  
 
-
 # What is this?
-It is a simple dictionary database consisting of 200307 English words and 535911 Turkish words, matched, separated by categories and word types.[Download JSON](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-json.zip)    
+It is a simple dictionary database consisting of 200307 English words and 535911 Turkish words, matched, separated by categories and word types.  
+[Download JSON](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-json.zip)    
 [Download SQL](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-sql.zip)   
-# Usage ? 
+# Usage  
 ## JSON 
 There are 2 files in this repository. One of them is **dictionary-json.zip** and **dictionary-sql.zip**. The first file is kept in JSON format and there are 1460672 paired words in total. In simple terms, there is an example reading this JSON file using the GSON library with the Java code you see below.   
 
