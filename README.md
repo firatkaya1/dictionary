@@ -1,9 +1,13 @@
-# What ?
+(Read this document in turkish language)[https://github.com/firatkaya1/dictionary/blob/main/README_TR.md] :point_left:  
+(Read this document in english language)[https://github.com/firatkaya1/dictionary/blob/main/README.md] :point_left:  
+
+
+# What is this?
 It is a simple dictionary database consisting of 200307 English words and 535911 Turkish words, matched, separated by categories and word types.[Download JSON](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-json.zip)    
 [Download SQL](https://raw.githubusercontent.com/firatkaya1/dictionary/main/dictionary-sql.zip)   
 # Usage ? 
 ## JSON 
-There are 2 files in this repository. One of them is ** dictionary-json.zip ** and ** dictionary-sql.zip **. The first file is kept in JSON format and there are 1460672 paired words in total. In simple terms, there is an example reading this JSON file using the GSON library with the Java code you see below.   
+There are 2 files in this repository. One of them is **dictionary-json.zip** and **dictionary-sql.zip**. The first file is kept in JSON format and there are 1460672 paired words in total. In simple terms, there is an example reading this JSON file using the GSON library with the Java code you see below.   
 
 Firstly, if you don't have the GSON library on your computer, download it. Or if you are in a maven based project, add the dependency to pom.xml.
 
@@ -29,7 +33,7 @@ public class English {
 ```java
 public static void main(String[] args) {
         Gson gson = new Gson();
-        // İndirmiş olduğumuz JSON dosyasının uzantısı belirttik.
+        // JSON File path
         String path = "/home/kaya/Downloads/dictionary-json/dictionary.json";
         try{
             JsonReader reader = new JsonReader(new FileReader(path));
@@ -51,7 +55,7 @@ English{word='Victory', type='n.', category='General', turkish='galebe'}
 ```
 
 ## SQL
-Download the file named ** dictionary-sql.zip ** in the repository to your computer and import it into the MySQL you used. Schema's name might be ** lemon **.  
+Download the file named **dictionary-sql.zip** in the repository to your computer and import it into the MySQL you used. Schema's name might be ** lemon **.  
 
 The schema file we have obtained contains 5 tables in total. These are category, english, translate, turkish and type. The picture below will help you understand what the relationships between the tables are, even if it is small.
 
@@ -61,7 +65,7 @@ The schema file we have obtained contains 5 tables in total. These are category,
 
 You can obtain the values you want to search on the tables with the ready queries below.   
 
-For example, let's we assume we wants to translate turkish meaning of "hello" word.  
+For example, suppose you want to translate the Turkish meaning of the word "hello".
 ```sql
 SELECT translate.id as id,english.word as word_en,turkish.word as word_tr,type.name as type,category.name as category    
 FROM translate     
