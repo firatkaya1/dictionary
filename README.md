@@ -1,5 +1,4 @@
-[For Turkish ](https://github.com/firatkaya1/dictionary/blob/main/README_TR.md) :point_left:  
-[For English](https://github.com/firatkaya1/dictionary/blob/main/README.md) :point_left:  
+[Turkish ](https://github.com/firatkaya1/dictionary/blob/main/README_TR.md) :point_left:  
 
 # What is this?
 It is a simple dictionary database consisting of 200307 English words and 535911 Turkish words, matched, separated by categories and word types.  
